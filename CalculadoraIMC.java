@@ -1,5 +1,3 @@
-// atividade de Java
-
 import java.util.Scanner;
 
 public class CalculadoraIMC {
@@ -11,12 +9,13 @@ public class CalculadoraIMC {
         String nome = scanner.nextLine();
 
         System.out.println("Qual é seu peso em kg? ");
-        int peso = scanner.nextInt();
+        double peso = scanner.nextDouble();
 
         System.out.println("Qual é sua altura em cm? ");
-        int altura = scanner.nextInt();
+        double alturaCm = scanner.nextDouble();
+        double alturaM = alturaCm / 100;
 
-        int contaImc = peso / altura * altura;
+        double contaImc = peso / (alturaM * alturaM);
 
         if (contaImc < 18.5) {
             System.out.println(nome + ", você está abaixo do seu peso ideal");
